@@ -1,215 +1,154 @@
 <!DOCTYPE html>
 <html>
-<head>
+<head> 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
-    <title>Sign up</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700&display=swap" rel="stylesheet">
+    <title>Sign up | Renewable Energy</title>
     <style>
-        .container {
-            position: relative;
-            margin-top: 60px; 
-        }
-        .overlay {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            color: white;
-            font-size: 100px; 
-            text-align: center;
-            display: none;
-        }
-        #thal {
-            width: 100%;
-            transition: filter 0.5s ease;
-        }
         body {
-            background-color: #2b2929;
             margin: 0;
             padding: 0;
-            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-        }
-        ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 10px;
-            overflow: hidden;
-            background-color: #333;
-            position: fixed;
+            font-family: "Poppins", sans-serif;
+            background-image: url("pic.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
             width: 100%;
-            top: 0;
-            z-index: 1000;
-            display: flex;
-            justify-content: center;
+            height: 100vh;
+            background-color: rgba(51, 51, 51, 0.2); 
         }
-        li {
-            margin: 0 15px; 
+        
+        form {
+            background-color: #2b2929; 
+            padding: 20px;
+            border-radius: 10px;
+            width: 300px;
+            margin: auto; 
+            margin-top: 100px;
+            color: rgb(161, 156, 156);
         }
-        li a {
+        fieldset {
+            border-radius: 10px;
+            border: 2px solid;
+        }
+        legend {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        
+        label {
             display: block;
-            color: white;
-            text-align: center;
-            padding: 14px 16px;
-            font-size: 24px; 
-            text-decoration: none;
+            margin-bottom: 10px;
         }
-        li a:hover {
-            background-color: #111;
-            transition: 0.5s;
-        }
-     
-        #tonka, #tonka2, #tonka3 {
+        
+        input {
+            width: 250px;
+            padding: 5px;
+            margin-bottom: 10px;
+            border-radius: 5px; 
+            font-family: "Poppins", sans-serif;
+            background-color: #1d1c1c;
             color: white;
+        }
+        #sbm {
+            background-color: #242323;
+            border-radius: 5px;
+            width: calc(100% - 9px);
+            padding: 5px;
+            font-size: 15px;
+            font-family: "Poppins", sans-serif;
+            margin: 5px;
+            color: white;
+        }
+        #sbm:hover {
+            background-color: rgb(180, 180, 180);
+            transform: scale(105%);
+            transition: 0.4s;
+        }
+        h1{
+            padding: 15px;
+            background-color: #2b2929;
+            color: white;
+            margin-top: -5px;
+        }
+        #clr{
+            background-color: transparent;
+            width: calc(100% - 9px);
+            font-size: 15px;
+            font-family: "Poppins", sans-serif;
+            margin: 5px;
+            color: white;
+            cursor: pointer;
+            border: none;
             padding: 5px;
         }
-        #love, #love2, #love3 {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-top: 20px;
-            background-color: #ffffff;
-        }
-        #poppin, #poppin2, #poppin3 {
-            font-size: large;
-            font-family: "Poppins", sans-serif;
-            font-weight: 500;
-            font-style: normal;
-            padding: 10px;
-            background-color: #ffffff;    
-            border-radius: 20px;
-            margin-right: 20px;
-            max-width: 39%;
-            transform: scale(104%);
-        }
-        #poppin:hover, #poppin2:hover, #poppin3:hover{
+        #clr:hover{
+            color: #867e7e;
             transition: 0.4s;
-            transform: scale(106%);
         }
-        #see {
-            max-width: 30%;
-            border-radius: 20px;
-            padding: 10px;
-        }
-        #see2{
-            max-width: 20%;
-            border-radius: 20px;
-            padding: 10px;
-        }
-        #see3{
-            max-width: 19%;
-            border-radius: 20px;
-            padding: 10px;
-        }
-        #show{
-            margin-top: -9px;
-        }
-        #love3{
-            border-bottom: #333 solid 10px;
-        }
-        #thalya {
-             position: relative;
-             display: inline-block;
-             width: 100%;
-             height: 30vh; 
-        }   
-
-#thal2 {
-    width: 100%; 
-    height: 100%;
-    transition: opacity 0.5s ease; 
-    object-fit: cover;
-}
-
-#thalya:hover #thal2 {
-    opacity: 0.1; 
-}
-
-#p {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-top: -12px; 
-    margin-left: -50px;
-    color: white;
-    font-size: 24px;
-    font-weight: bold;
-    text-align: center;
-    padding: 10px;
-    border-radius: 10px;
-    opacity: 0;
-    transition: opacity 0.5s ease;
-}
-
-#thalya:hover #p {
-    opacity: 1;
-}
-
     </style>
 </head>
-<body>
-    <ul>    
-        <li><a href="index.html">Home</a></li>
-        <li><a href="indexxx.html">The Sources</a></li>
-        <li><a href="references .html">References</a></li>
-        <li><a href="about.html">References</a></li>
-        <li><a href="contact.html">Creator</a></li>
-    </ul>
-    <div class="container">
-        <img id="thal" src="control.webp">
-        <div id="textOverlay" class="overlay">Renewable Energy: Exploring sustainable energy sources.</div>
+<body onload="loadData()">
+    <div id ="top">
+        <h1>Sign In | Renewable Energy</h1>
     </div>
-    <div id="show"> 
-        <center>
-            <h1 id="tonka">WHAT IS RENEWABLE ENERGY?</h1>
-        </center>
-    </div>
-    <div id="love">
-        <p id="poppin">
-            Renewable energy refers to power generated from natural sources that are constantly replenished. 
-            These sources are crucial for sustainable development as they help reduce greenhouse gas emissions and dependency on fossil fuels. By getting power from renewable energy sources, we can significantly decrease the impacts of climate change, while promoting energy security, and more economic stability. The adoption of these technologies lead to innovations and the creation of jobs in green energy industries.
-        </p>
-        <img id="see" src="up.jpg">
-    </div>
-    <div id="show2"> 
-        <center>
-            <h1 id="tonka2">WHY RENEWABLE ENERGY?</h1>
-        </center>
-    </div>
-    <div id="love2">
-        <p id="poppin2">
-        Renewable energy is important for reducing greenhouse gas emissions and climate change, as it produces little to no emissions at all. 
-        It also decreases air pollution, improving public health by reducing respiratory and cardiovascular issues caused by pollution emitted by fossil fuels. 
-        Renewable energy sources, such as solar and wind, are sustainable, which can make a long-term supply of energy. 
-        Renewable energy can cause economic growth by creating jobs in the green energy sector and lowering dependence on  fuels.
-        </p>
-        <img id="see2" src="history.png">
-    </div>
-    <div id="show3"> 
-        <center>
-            <h1 id="tonka3">HOW DO WE GET RENEWABLE ENERGY?</h1>
-        </center>
-    <div id="love3">
-        <p id="poppin3">
-            Renewable energy harnesses natural resources that replenish themselves over time. Solar energy is captured using solar panels, which convert sunlight directly into electricity. Wind energy is harnessed using wind turbines that capture the energy of the wind and convert it into electricity. Hydropower is generated by directing flowing water through turbines, typically in dams or reservoirs, to produce electricity. 
-            These sources provide clean, sustainable energy alternatives that help reduce greenhouse gas emissions and combat climate change.
-    </p>
-    <img id="see3" src="shows.png">
-</div>
-<div id="thalya">
-    <a href="indexxx.html">
-        <img id="thal2" src="history.png" alt="History">
-        <h1 id="p">Sources</h1>
-    </a>
-</div>
-</div>
+    <form onsubmit="saveData()">
+        <fieldset>
+            <legend>Log in or make account:</legend>
+            
+            <label for="username">Username:</label>
+            <input placeholder="Enter username" type="username" name="username" id="username" ><br>
+            
+            <label for="password">Password:</label>
+            <input placeholder="Enter password" type="password" name="password" id="password"><br>
+            
+            <label for="confirmPassword">Confirm Password:</label>
+            <input placeholder="Confirm password" type="password" name="confirmPassword" id="confirmPassword"><br>
+            
+            <button id ="sbm" onclick="check()" type ="submit">Log in!</button>
+            <button id = "clr" onclick="clearData()" type="reset">Clear save data</button>
+        </fieldset>
+    </form>
+
+    <script>
+        function check() {
+            var pass = document.getElementById('password').value; 
+            var conf = document.getElementById('confirmPassword').value;
+
+            if (pass !== conf || pass == "" || conf == "") {
+                window.alert('Passwords do not match, or you have not entered a password yet.');
+                return false;
+            }
+            else{
+                window.open("home.html")
+                return true;
+            }
+        }
+
+        function saveData() {
+            var username = document.getElementById('username').value;
+            var password = document.getElementById('password').value;
+            localStorage.setItem('username', username);
+            localStorage.setItem('password', password);
+        }
+
+        function loadData() {
+            var username = localStorage.getItem('username');
+            var password = localStorage.getItem('password');
+
+            if (username) {
+                document.getElementById('username').value = username;
+            } 
+
+            if (password) {
+                document.getElementById('password').value = password;
+            } 
+        }
+        function clearData() {
+            localStorage.removeItem('username');
+            localStorage.removeItem('password');
+        }
+    </script>
 </body>
 </html>
-<script>
-  window.onload = function() {
-            setTimeout(function() {
-                document.getElementById('thal').style.filter = 'brightness(50%)';
-                document.getElementById('textOverlay').style.display = 'block';
-            }, 2000);
-        };
-</script>
